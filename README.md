@@ -5,35 +5,59 @@ my internship outcome of cracking a room made by people of Zybeak Technologies
 
 
 ### To find IP address of unknown machine:
+
 ```nmap 10.0.2.15/24 –open```
- 
+
+ ![alt text](nmap.jpg)
+
 ### Run nmap scan for identified IP after neglecting unwanted options:
+
 ```nmap -sV -p- -T4 -A 10.0.2.5/24 –open```
  
- 
+ ![alt text](<nmap v1.jpg>)
+
+ ![alt text](<nmap v2.jpg>)
+
 ### From the above scan, we can find 3 ports are available open to crack the machine i.e, port 80,8080,65000 are open
 #### Port 80:
+
+![alt text](80.jpg)
  
 ### Analysing the page source, we got login credentials
  
+![alt text](<80 pg.jpg>)
+
 ### Login the page
  
+![alt text](<80 l.jpg>)
+
 ### Audio plays for successful login
 
 #### Port 8080:
  
+![alt text](8080.jpg)
+
 ### Analysing the page source, we got login credentials
  
+![alt text](<8080 pg.jpg>)
+
 ### Login the page
+
+![alt text](<8080 l.jpg>)
  
 ### Redirection is set to login page with timer of 15 seconds
 
 #### Port 65000:
  
+![alt text](65000.jpg)
+
 ### Analysing the page source, we got login credentials
- 
+
+ ![alt text](<65000 pg.jpg>)
+
 ### Login the page
 
+![alt text](<65000 l.jpg>)
  
 ### Image gif appears 
 
@@ -43,19 +67,31 @@ my internship outcome of cracking a room made by people of Zybeak Technologies
 Or 
 
 ### Hydra tool can be performed to crack the user
+
 ```hydra -L username100.txt -P password100.txt ssh://10.0.2.5```
  
+ ![alt text](hydra.jpg)
+
 ### After finding the login credentials of the unknown machine, login the server using ssh
+
 ```ssh elliot@10.0.2.5```
+
+![alt text](ssh.jpg)
  
 ### Find the flag from pagam3 file
 
 ### To switch user, first see hidden files
+
 ```ls -la```
  
+ ![alt text](<ls -la.jpg>)
+
 ### Find the login credentials from hidden files as rajini@dec12
 ### Switch the user
+
 ```su rajini```
+
+![alt text](su.jpg)
  
 ### Find the flag in pagam file
 
